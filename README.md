@@ -2,12 +2,9 @@
 
 <div align="center">
 
-# ⚙️ EmperorStore 🛡️
+#  EmperorStore 
 ### *El Arsenal Definitivo del Imperio de la Humanidad*
 
-[![Status](https://img.shields.com/badge/Estado-Bendecido_por_el_Omnissiah-success?style=for-the-badge&logo=codemagic)]()
-[![Seguridad](https://img.shields.com/badge/Inquisición-Aprobado-red?style=for-the-badge&logo=shield)]()
-[![Licencia](https://img.shields.com/badge/Lex_Imperialis-Protegido-yellow?style=for-the-badge&logo=book)]()
 
 > *"Un rifle láser puede fallar, un tanque puede ser destruido, pero la fe en el Emperador y el acero templado de un bólter nunca defraudan."*  
 > — **Archisabueso Trazyn (Logística de Vanguardia)**
@@ -24,7 +21,7 @@ Nuestra interfaz web ha sido forjada con la solidez de un casco de Terminador y 
 
 ---
 
-## 🛠️ Inventario del Repositorio (Estructura)
+##  Inventario del Repositorio (Estructura)
 
 Los archivos principales que componen este bastión digital son:
 
