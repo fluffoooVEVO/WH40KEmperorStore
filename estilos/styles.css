@@ -3,3 +3,10 @@
     max-height: 64px;
     width: auto;
 }
+
+.imagen-detalle {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
