@@ -97,7 +97,7 @@ function renderProductos(listaProductos) {
 
     listaProductos.forEach(function(producto) {
     html += `
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l4">
         <div class="card">
             <div class="card-image">
             <img src="${producto.imagen}" alt="${producto.nombre}">
@@ -119,20 +119,24 @@ function renderProductos(listaProductos) {
 
 renderProductos(productos);
 
-const botonesFiltro = document.querySelectorAll(".btn-filtro");
+document.addEventListener('DOMContentLoaded', function() {
+    const elems = document.querySelectorAll('select');
+    M.FormSelect.init(elems);
+});
 
-if (botonesFiltro.length > 0) {
-    botonesFiltro.forEach(function(boton) {
-    boton.addEventListener("click", function() {
-        const categoria = boton.getAttribute("data-categoria");
-        if (categoria === "todas") {
+const selectCategoria = document.getElementById("filtro-categoria");
+
+if (selectCategoria) {
+    selectCategoria.addEventListener("change", function() {
+    const categoria = selectCategoria.value;
+
+    if (categoria === "todas") {
         renderProductos(productos);
-        } else {
+    } else {
         const filtrados = productos.filter(function(p) {
-            return p.categoria === categoria;
+        return p.categoria === categoria;
         });
         renderProductos(filtrados);
-        }
-    });
+    }
     });
 }
