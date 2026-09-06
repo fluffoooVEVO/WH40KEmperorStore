@@ -93,6 +93,9 @@ const productos = [
 
 function renderProductos(listaProductos) {
     const contenedor = document.getElementById("lista-productos");
+    if (!contenedor) {
+        return;
+    }
     let html = "";
 
     listaProductos.forEach(function(producto) {
@@ -119,11 +122,6 @@ function renderProductos(listaProductos) {
 
 renderProductos(productos);
 
-document.addEventListener('DOMContentLoaded', function() {
-    const elems = document.querySelectorAll('select');
-    M.FormSelect.init(elems);
-});
-
 const selectCategoria = document.getElementById("filtro-categoria");
 
 if (selectCategoria) {
@@ -140,10 +138,3 @@ if (selectCategoria) {
     }
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const selects = document.querySelectorAll('select');
-    M.FormSelect.init(selects);
-    const sidenavs = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenavs);
-});
