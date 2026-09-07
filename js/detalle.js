@@ -1,5 +1,3 @@
-// js/detalle.js
-
 const params = new URLSearchParams(window.location.search);
 const codigoProducto = params.get("codigo");
 
