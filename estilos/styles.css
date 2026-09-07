@@ -86,29 +86,29 @@ nav ul#nav-mobile {
     align-items: center;
 }
 
-/* El texto de la opción seleccionada */
+
 .filtros .select-wrapper input.select-dropdown {
     color: var(--color-dorado);
     border-bottom: 1px solid var(--color-dorado);
 }
 
-/* La flechita del dropdown */
+
 .filtros .select-wrapper .caret {
     fill: var(--color-dorado);
 }
 
-/* La línea que se resalta al hacer foco (reemplaza el turquesa) */
+
 .filtros .select-wrapper input.select-dropdown:focus {
     border-bottom: 1px solid var(--color-dorado);
     box-shadow: 0 1px 0 0 var(--color-dorado);
 }
 
-/* El label "Filtrar por categoría" */
+
 .filtros label {
     color: var(--color-dorado) !important;
 }
 
-/* El fondo y texto de las opciones desplegadas */
+
 .dropdown-content {
     background-color: var(--color-fondo-oscuro);
 }
@@ -129,4 +129,44 @@ nav ul#nav-mobile {
 .filtros {
     max-width: 300px;
     margin-bottom: 30px;
+}
+
+.auth-section {
+    padding: 60px 0;
+}
+
+.auth-card {
+    padding: 10px 20px 20px;
+}
+
+.auth-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-link {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.mensaje-error {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.mensaje-exito {
+    color: #2e7d32;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .auth-section {
+        padding: 30px 0;
+    }
+
+    .auth-card {
+        padding: 5px 10px 15px;
+    }
 }
