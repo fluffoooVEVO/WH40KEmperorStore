@@ -1,0 +1,138 @@
+.logo-navbar {
+    height: 100%;
+    max-height: 170px;
+    width: auto;
+}
+
+.imagen-detalle {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+:root {
+    --color-fondo-oscuro: #1a1a2e;
+    --color-fondo-claro: #1e1e2f;
+    --color-dorado: #c9a227;
+    --color-rojo-sangre: #8a0303;
+    --color-texto: #f4f1ea;
+}
+
+body {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+}
+
+nav {
+    background-color: var(--color-fondo-oscuro) !important;
+    height: 170px !important;
+}
+
+nav a {
+    color: var(--color-dorado) !important;
+}
+
+.card {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto);
+}
+
+.card .card-title {
+    color: var(--color-dorado);
+}
+
+body {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, .brand-logo {
+    font-family: 'Cinzel', serif;
+}
+
+.card-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-blog .card-image {
+    height: 800px;
+}
+
+input[type="number"] {
+    color: var(--color-dorado);
+}
+
+nav ul a {
+    font-size: 1.4rem;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul#nav-mobile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.filtros .select-wrapper input.select-dropdown {
+    color: var(--color-dorado);
+    border-bottom: 1px solid var(--color-dorado);
+}
+
+.filtros .select-wrapper .caret {
+    fill: var(--color-dorado);
+}
+
+.filtros .select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid var(--color-dorado);
+    box-shadow: 0 1px 0 0 var(--color-dorado);
+}
+
+.filtros label {
+    color: var(--color-dorado) !important;
+}
+
+.dropdown-content {
+    background-color: var(--color-fondo-oscuro);
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+    color: var(--color-dorado);
+}
+
+.dropdown-content li.selected {
+    background-color: var(--color-fondo-claro);
+}
+
+.dropdown-content li:hover {
+    background-color: var(--color-rojo-sangre);
+}
+
+.filtros {
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: var(--color-dorado);
+    color: var(--color-fondo-oscuro);
+    font-weight: 600;
+}
+
+.btn-hero:hover {
+    background-color: var(--color-texto);
+    color: var(--color-fondo-oscuro);
+}
