@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emperor Store</title>
+    <title>Emperor Store - Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
@@ -51,23 +51,26 @@
     </ul>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Emperor Store</h1>
-                <p>Los mejores precios desde hace 40.000 años!</p>
-                <a href="productos.html" class="btn waves-effect waves-light">
-                    Ver Productos
-                </a>
+    <section class="productos-container">
+    <div class="container">
+        <h1>Catálogo de Armamento</h1>
+
+        <div class="filtros">
+            <div class="input-field">
+            <select id="filtro-categoria">
+                <option value="todas" selected>Todas</option>
+                <option value="Armas de Fuego">Armas de Fuego</option>
+                <option value="Armas cuerpo a cuerpo">Cuerpo a Cuerpo</option>
+                <option value="Armas de Apoyo">Armas de Apoyo</option>
+            </select>
+            <label>Filtrar por categoría</label>
             </div>
-        </section>
-        <section class="productos-destacados">
-            <div class="container">
-                <h2>Armamento Destacado</h2>
-                <div class="row" id="lista-productos">
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+        <div class="row" id="lista-productos">
+        </div>
+    </div>
+    </section>
+</main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/productos.js"></script>

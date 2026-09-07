@@ -66,7 +66,7 @@ const productos = [
         codigo: "FL-001",
         nombre: "Flamer",
         categoria: "Armas de Apoyo",
-        precio: 1500000,
+        precio: 500000,
         stock: 6,
         imagen: "img/Flamer.webp",
         descripcion: "El Flamer es un arma de apoyo utilizada por los Marines Espaciales en el universo de Warhammer 40,000. Está diseñado para disparar un chorro de fuego que puede incinerar a los enemigos y causar un daño devastador en áreas amplias, lo que lo convierte en una herramienta efectiva para limpiar posiciones enemigas."
@@ -75,7 +75,7 @@ const productos = [
         codigo: "FP-001",
         nombre: "Fusil de Plasma",
         categoria: "Armas de Apoyo",
-        precio: 2000000,
+        precio: 200000,
         stock: 7,
         imagen: "img/Plasma_Incinerator.webp",
         descripcion: "El Fusil de Plasma es un arma de apoyo utilizada por los Marines Espaciales en el universo de Warhammer 40,000. Está diseñado para disparar proyectiles de plasma a alta temperatura, capaces de atravesar la armadura enemiga y causar un daño devastador. Es especialmente efectivo contra objetivos blindados y fortificaciones."
@@ -93,11 +93,14 @@ const productos = [
 
 function renderProductos(listaProductos) {
     const contenedor = document.getElementById("lista-productos");
+    if (!contenedor) {
+        return;
+    }
     let html = "";
 
     listaProductos.forEach(function(producto) {
     html += `
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l4">
         <div class="card">
             <div class="card-image">
             <img src="${producto.imagen}" alt="${producto.nombre}">
@@ -107,7 +110,7 @@ function renderProductos(listaProductos) {
             <p>$${producto.precio.toLocaleString("es-CL")}</p>
             </div>
             <div class="card-action">
-            <a href="detalle-producto.html">Ver detalle</a>
+            <a href="detalle-producto.html?codigo=${producto.codigo}">Ver detalle</a>
             </div>
         </div>
         </div>
@@ -118,3 +121,20 @@ function renderProductos(listaProductos) {
 }
 
 renderProductos(productos);
+
+const selectCategoria = document.getElementById("filtro-categoria");
+
+if (selectCategoria) {
+    selectCategoria.addEventListener("change", function() {
+    const categoria = selectCategoria.value;
+
+    if (categoria === "todas") {
+        renderProductos(productos);
+    } else {
+        const filtrados = productos.filter(function(p) {
+        return p.categoria === categoria;
+        });
+        renderProductos(filtrados);
+    }
+    });
+}

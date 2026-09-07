@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emperor Store</title>
+    <title>Emperor Store - Blogs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
@@ -50,27 +50,54 @@
         <li><a href="carrito.html"><i class="material-icons">shopping_cart</i>Carrito</a></li>
     </ul>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Emperor Store</h1>
-                <p>Los mejores precios desde hace 40.000 años!</p>
-                <a href="productos.html" class="btn waves-effect waves-light">
-                    Ver Productos
+<main>
+    <section class="blogs-container">
+    <div class="container">
+        <h1>Noticias del Imperio</h1>
+        <div class="row">
+
+        <div class="col s12 m6">
+            <div class="card card-blog">
+            <div class="card-image">
+                <img src="img/Emperador.webp" alt="La Gran Cruzada">
+            </div>
+            <div class="card-content">
+                <span class="card-title">La Gran Cruzada</span>
+                <p>
+                Hace más de 10.000 años, el Emperador de la Humanidad lideró la Gran Cruzada
+                para reunificar a la humanidad dispersa por la galaxia bajo un solo estandarte.
+                </p>
+                <a href="https://warhammer40000.com/" target="_blank" rel="noopener noreferrer">
+                Lee más en el sitio oficial
                 </a>
             </div>
-        </section>
-        <section class="productos-destacados">
-            <div class="container">
-                <h2>Armamento Destacado</h2>
-                <div class="row" id="lista-productos">
-                </div>
             </div>
-        </section>
-    </main>
+        </div>
+
+        <div class="col s12 m6">
+            <div class="card card-blog">
+            <div class="card-image">
+                <img src="img/SHHHH.webp" alt="Los Adeptus Astartes">
+            </div>
+            <div class="card-content">
+                <span class="card-title">Los Adeptus Astartes</span>
+                <p>
+                Conocidos también como Space Marines, son guerreros genéticamente mejorados
+                que representan la fuerza de combate más temida del Imperio.
+                </p>
+                <a href="https://warhammer40000.com/" target="_blank" rel="noopener noreferrer">
+                Lee más en el sitio oficial
+                </a>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+</main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/productos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
