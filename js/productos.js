@@ -110,7 +110,13 @@ function renderProductos(listaProductos) {
             <p>$${producto.precio.toLocaleString("es-CL")}</p>
             </div>
             <div class="card-action">
-            <a href="detalle-producto.html?codigo=${producto.codigo}">Ver detalle</a>
+                <a href="detalle-producto.html?codigo=${producto.codigo}">
+                    Ver detalle
+                </a>
+                <button class="btn waves-effect waves-light agregar-carrito" data-codigo="${producto.codigo}">
+                    <i class="material-icons left">add_shopping_cart</i>
+                     Agregar
+                </button>
             </div>
         </div>
         </div>
@@ -118,7 +124,52 @@ function renderProductos(listaProductos) {
     });
 
     contenedor.innerHTML = html;
-}
+
+    const botonesAgregar = contenedor.querySelectorAll(".agregar-carrito");
+    botonesAgregar.forEach(function(boton) {
+        boton.addEventListener("click", function() {
+            const codigo = boton.dataset.codigo;
+            const productoSeleccionado = productos.find(function(producto) {
+                return producto.codigo === codigo;
+            });
+            if (productoSeleccionado) {
+                if (productoSeleccionado.stock <= 0) {
+                    M.toast({
+                        html: "Producto sin stock"
+                    });
+                    return;
+                    }
+                    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                    const productoEnCarrito = carrito.find(function(producto) {
+                        return producto.codigo === productoSeleccionado.codigo;
+                    });
+
+                    if (productoEnCarrito) {
+                        if (productoEnCarrito.cantidad >= productoSeleccionado.stock) {
+                            M.toast({
+                                html: "No hay más stock disponible"
+                            });
+                            return;
+                        }
+                        productoEnCarrito.cantidad++;
+                    } else {
+                        carrito.push({
+                        codigo: productoSeleccionado.codigo,
+                        nombre: productoSeleccionado.nombre,
+                        precio: productoSeleccionado.precio,
+                        imagen: productoSeleccionado.imagen,
+                        stock: productoSeleccionado.stock,
+                        cantidad: 1
+                    });
+                }
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                M.toast({
+                    html: productoSeleccionado.nombre + " agregado al carrito"
+            });
+                }
+            });
+        });
+    }
 
 renderProductos(productos);
 

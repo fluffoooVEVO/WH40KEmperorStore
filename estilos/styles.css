@@ -161,6 +161,42 @@ nav ul#nav-mobile {
     min-height: 20px;
 }
 
+.contacto-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 800px;
+}
+
+.contacto-section h1 {
+    color: var(--color-dorado);
+    text-align: center;
+}
+
+.contacto-section > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.contacto-card {
+    background-color: var(--color-fondo-oscuro);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contacto-card input,
+.contacto-card textarea {
+    color: var(--color-texto);
+}
+
+.contacto-card label {
+    color: var(--color-dorado);
+}
+
+.contacto-card .btn {
+    background-color: var(--color-rojo-sangre);
+}
+
 @media only screen and (max-width: 600px) {
     .auth-section {
         padding: 30px 0;
@@ -168,5 +204,25 @@ nav ul#nav-mobile {
 
     .auth-card {
         padding: 5px 10px 15px;
+    }
+
+    #carrito-contenido .card.horizontal {
+        display: block;
+    }
+
+    #carrito-contenido .card.horizontal .card-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #carrito-contenido .card.horizontal .card-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    #carrito-contenido .card-action {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 }
